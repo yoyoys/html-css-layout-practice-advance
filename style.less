@@ -282,7 +282,15 @@ nav{
     .text-ellipsis;
 }
 
-.items-area,.best-sellers-area{   
+.items-area{   
+    .items-area-base(4);
+}
+
+.best-sellers-area{
+    .items-area-base(5);    
+}
+
+.items-area-base(@count-per-row){
     .item-details{
         &:after{
             .clearfix;
@@ -292,18 +300,21 @@ nav{
             color:@highlight-color;          
         }
         .item{
+            @width:(@page-width - (@count-per-row - 1) * @item-margin ) / @count-per-row;
             float: left;
-            width: 220px;
+            width: @width;
             margin-left: @item-margin;
             margin-bottom: 16px;
             position: relative;
             img{
                 display: block;
+                width:@width;
             }
             h5,.stars{
                 line-height: 2;
             }
-            &:nth-of-type(4n+1){
+            @nth:~"@{count-per-row}n+1";
+            &:nth-of-type(@{nth}){
                 clear: left;
                 margin-left: 0;
             }
