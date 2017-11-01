@@ -1,4 +1,4 @@
-// out: docs/style.css,relativeUrls:true
+// out: style.css,relativeUrls:true
 @import "./font-awesome/less/font-awesome";
 @page-width:940px;
 @page-padding:25px;
@@ -52,7 +52,7 @@ a{
 
 
 
-span.price:before{
+.price:before{
     content: '$';
 }
 .page{
@@ -295,6 +295,13 @@ nav{
             float: left;
             width: 220px;
             margin-left: @item-margin;
+            margin-bottom: 16px;
+            img{
+                display: block;
+            }
+            h5,.stars{
+                line-height: 2;
+            }
             &:nth-of-type(4n+1){
                 clear: left;
                 margin-left: 0;
