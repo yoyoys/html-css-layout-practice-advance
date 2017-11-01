@@ -1,0 +1,434 @@
+// out: style.css,relativeUrls:true
+@import "./font-awesome/less/font-awesome";
+@page-width:940px;
+@page-padding:25px;
+@bg-color-main:#fff;
+@border-color: #ebebeb;
+@highlight-color:#f6344b;
+@bg-color-gray:#f5f5f5;
+@quote-color:#ccc;
+@border-color-nav: #eee;
+@border-thin: 2px solid @border-color;
+@border-normal: 4px solid @border-color-nav;
+@item-margin:20px;
+@item-font-size: 18px;
+
+body{
+    font-family: sans-serif;
+    font-size:14px;
+    font-weight: 500;
+    
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+body{
+    background: black;
+}
+
+a{
+    text-decoration:none;
+    color:@highlight-color;
+    font-weight: 600;
+    &:hover{
+        color:darken(@highlight-color,20%);
+    }
+}
+
+
+.fa-icon(@name){
+    .fa;
+    content:@name;
+}
+
+.text-ellipsis{
+    text-overflow: ellipsis;
+    white-space: nowrap;       
+    overflow: hidden;    
+}
+
+
+
+span.price:before{
+    content: '$';
+}
+.page{
+    width: 940px;
+    margin: 0 auto;
+    background: white;
+    padding: 0 @page-padding;
+    &>*{
+        margin-bottom: 30px;
+        &:last-child{
+            padding-bottom: 30px;
+            margin-bottom: 0;
+        
+        }
+    }
+}
+
+.clearfix{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.header-bar{
+    padding: 8px 0;
+    &:after{
+        .clearfix;
+    }
+    .left{
+        float: left;
+        h3{
+            margin-right: 14px;
+        }
+        & > *{
+            display: inline-block;
+           
+        }
+    }
+
+    .right{
+        float: right;
+        li{
+            float: left;
+            margin-left: 15px;
+            ul{
+                display: none;
+            }
+        }
+        
+        ul:after{
+            .clearfix;
+        }
+    }
+}
+
+header{
+    position: relative;
+    &:after{
+        .clearfix;
+    }
+    * {
+        vertical-align: middle;
+    }
+    
+    & > div{
+        border:@border-thin;
+    }
+    .cart-panel{        
+        float: left;        
+        & *{
+            display: inline-block;
+        }
+        .cart{
+            border-right:@border-thin;
+            padding: 8px;
+            &:before{
+                .fa-icon(@fa-var-shopping-cart);
+                .fa-2x;
+            }
+        }
+        .cart-detail{
+            padding: 0 8px;
+            .count{
+                margin-right: .5em;
+            }
+        }
+    }
+
+    h1{
+        margin:auto;        
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    .search-panel{
+        float:right;
+        & * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        input{
+            height: 1.5em;   //not sure
+            border-width: 0;  
+            margin:0 8px;          
+        }
+        .search{
+            border-left: @border-thin;
+            padding: 8px;
+            &:before{
+                .fa-icon(@fa-var-search);
+                .fa-2x;
+            }
+        }
+    }
+
+}
+
+nav{
+    ul{
+        width: 100%;
+        &:after{
+            .clearfix;       
+        }
+    }
+    
+    li{
+        font-weight: 600;
+        float: left;
+        padding:20px;        
+        border:@border-normal;
+        border-width: 4px 0;
+        &.current{
+            background-color: @highlight-color;
+            border-color: @highlight-color;
+        }
+
+        &.right{
+            float: right;
+        }
+
+    }
+}
+
+
+
+.carousel-area{
+    & >* {
+        float: left;
+    }
+    &:after{
+        .clearfix;
+    }
+    .main-slide{
+        width: 700px;
+        height: 400px;
+        margin-right: 28px;
+    }
+
+    .sponsor{
+        width:212px;
+        height:188px;
+        
+        &:first-of-type{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.feature-area{
+    &:after{
+        .clearfix;
+    }
+    .feature{
+        float: left;
+        width: 250px;
+        background-color: @border-color;
+        text-align: center;
+        padding: 13px 18px;
+        margin-right: 41px;
+        &:last-child{
+            margin-right: 0;
+        }
+
+        h3{
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        p{
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 1.4;            
+        }
+    }
+}
+
+.title{
+    text-align: center;
+    border-bottom: @border-normal;
+    margin-bottom:18px;
+    position: relative;
+    h2{
+        display:inline-block;
+        font-size: 24px;
+        font-weight: 600;
+        margin-right: 17px;
+        padding:8px 0;
+        &.current{
+            color: @highlight-color;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .pager{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+.item-font-style{
+    font-size:@item-font-size;
+    font-weight: 600;
+    margin-top: .8em;
+    margin-bottom: .3em;
+    .text-ellipsis;
+}
+
+.items-area,.best-sellers-area{   
+    .item-details{
+        &:after{
+            .clearfix;
+        }
+        h4{
+            .item-font-style;  
+            color:@highlight-color;          
+        }
+        .item{
+            float: left;
+            width: 220px;
+            margin-left: @item-margin;
+            &:nth-of-type(4n+1){
+                clear: left;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.test-blog-area{
+    &>*{
+        float: left;
+    }
+    &:after{
+        .clearfix;
+    }
+
+    .test-area{        
+        width:455px;
+        margin-right: 30px;
+        .details{
+            padding:0 20px;
+            text-align: center;
+            
+            p{
+                line-height: 24px;
+                margin-bottom: 1em;
+                &:before{
+                    content: open-quote;
+                    margin-right: 8px;
+                }
+                &:after{
+                    content: close-quote;
+                    margin-left: 8px;
+                }
+                &:before,&:after{
+                    display: inline-block;
+                    vertical-align: middle;
+                    color:@quote-color;
+                    font-size: 36px;
+                    line-height: 24px;
+                }
+            }
+            h5,h6{
+                text-align: center;
+                line-height: 1.6;
+            }
+            .members{
+                margin-top: 1em;
+                text-align: center;
+                .member{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    
+    .blog-area{
+        width:455px;
+        .details{
+            &:after{.clearfix;}
+            .blog-post{
+                float: left;
+                width:(455px-@item-margin)/2;
+                line-height: 2;
+                &:first-of-type{
+                    margin-right: @item-margin;
+                }
+
+                h3{
+                    .item-font-style;
+                }
+
+                .options{
+                    &>*{
+                        display: inline-block;
+                        vertical-align: middle;                        
+                    }
+                    &>*{
+                        margin-right: 6px;
+                        &:before{
+                            .fa-lg;   
+                            margin-right: 6px;                     
+                        }
+                    }
+                    .author:before{
+                        .fa-icon(@fa-var-user); 
+                    }
+                    .comments:before{
+                        .fa-icon(@fa-var-comments); 
+                    }
+                    time:before{
+                        .fa-icon(@fa-var-calendar);
+                    }
+                }
+                p{
+                    overflow: hidden;
+                    height: 8em;
+                }
+            }
+        }
+    }
+}
+
+.sponsors-area{
+    text-align: center;
+    margin-left: -@page-padding;
+    margin-right: -@page-padding;
+    background-color: @bg-color-gray;
+    border:@border-thin;
+    border-width: 2px 0;
+    &>img{
+        display: inline-block;
+        vertical-align: middle;
+        margin:8px 8px;
+        max-width: 165px;
+    }
+}
+.ad-2-area{
+    .ad-area-base(2);
+}
+
+.ad-3-area{
+    .ad-area-base(3);
+}
+
+.ad-area-base(@count){
+    &:after{.clearfix;}
+    img.ad{
+        display: block;
+        float: left;
+        width:(@page-width - (@item-margin*(@count - 1))) / @count - 1;        
+        margin-right: @item-margin;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}

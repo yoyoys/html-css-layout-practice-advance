@@ -1,205 +1,205 @@
-<!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
+        link(rel="stylesheet", href="https://meyerweb.com/eric/tools/css/reset/reset.css")
+        link(rel="stylesheet", href="style.css")
     body
-        .header-bar
-            .left
-                h3 Welcome to our store!
-                select
-                    option(value="England")
-                select
-                option(value="USD")
-            .right
+        .page   
+            .header-bar
+                .left
+                    h3 Welcome to our store!
+                    span.flag
+                        img(src='http://fakeimg.pl/14x11/')
+                    select.country
+                        option England                        
+                    select.currency
+                        option USD
+                .right
+                    ul
+                        li
+                            a(href="") My Account
+                        li
+                            a(href="") Wishlist
+                        li
+                            a(href="") Checkout
+                        li
+                            a(href="") More
+                            ul
+                                li
+                                    a(href="") More 1
+                                li
+                                    a(href="") More 2
+                        li
+                            a(href="") Log in
+                
+            header
+                h1 Unique
+                .cart-panel
+                    .cart                        
+                    .cart-detail
+                        span.count 2
+                        span My Cart /&nbsp;
+                        span.total.price 259.00
+                .search-panel
+                    input(type="text", name="", placeholder="Search")
+                    .search                        
+            nav
                 ul
-                    li
-                        a(href="") My Account
-                    li
-                        a(href="") Wishlist
-                    li
-                        a(href="") Checkout
-                    li
-                        a(href="") More
-                        ul
-                            li
-                                a(href="") More 1
-                            li
-                                a(href="") More 2
-                    li
-                        a(href="") Log in
-               
-        header
-            .cart-panel
-                .cart
-                    img(src='http://fakeimg.pl/50/')
-                .cart-detail
-                    span.count 2
-                    span My Cart /
-                    span.total 259.00
-            h1 Unique
-            .search-panel
-                input(type="text", name="", placeholder="Search")
-                img(src='http://fakeimg.pl/50/')
-        nav
-            ul
-                li.current Home
-                li Pages
-                li Smartphones
-                li Camera & Photo
-                li Apple Store
-                li Computers
-                li Blog
-                li.right Features
-        .carousel-area        
-            .main-slide
-                img(src='http://fakeimg.pl/700x400/')
-            .sponsor
-                img(src='http://fakeimg.pl/212x188/')            
-            .sponsor
-                img(src='http://fakeimg.pl/212x188/')
-        .feature-area
-            .feature
-                img(src='http://fakeimg.pl/60/')
-                h3 Reasonable pricing
-                p Lorem ipsum dolor sit amet.
-            .feature
-                img(src='http://fakeimg.pl/60/')
-                h3 Limited time offers
-                p Similique sint consequatur id ipsum!
-            .feature
-                img(src='http://fakeimg.pl/60/')
-                h3 24/7 client support
-                p Tenetur ullam iusto aliquam qui.
-        .items-area
-            .title
-                h2.current New Arrivals
-                h2 Best Seller
-                h2 Latest Products
-            .item-details
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Quidem, vitae quos.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Reiciendis, recusandae voluptatibus.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Unde, omnis cum.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Illum, minus totam!
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Nam, veniam eos!
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Voluptatibus, corrupti adipisci.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Ullam, dolores ab.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-        .ad-2-area
-            img.ad(src='http://fakeimg.pl/455x140/')
-            img.ad(src='http://fakeimg.pl/455x140/')
-        .best-sellers-area
-            .title
-                h2
-                .pager
-                    a(href="") <
-                    a(href="") >
-            .item-details
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-                .item
-                    img(src='http://fakeimg.pl/220x250/')
-                    h4 Lorem, ipsum dolor.
-                    .stars ☆☆☆☆☆
-                    h5.price 155.00
-        .test-blog-area
-            .test-area
+                    li.current Home
+                    li Pages
+                    li Smartphones
+                    li Camera & Photo
+                    li Apple Store
+                    li Computers
+                    li Blog
+                    li.right Features
+            .carousel-area        
+                .main-slide
+                    img(src='http://fakeimg.pl/700x400/')
+                .sponsor
+                    img(src='http://fakeimg.pl/212x188/')            
+                .sponsor
+                    img(src='http://fakeimg.pl/212x188/')
+            .feature-area
+                .feature
+                    img(src='http://fakeimg.pl/60/')
+                    h3 Reasonable pricing
+                    p Lorem ipsum dolor sit amet.
+                .feature
+                    img(src='http://fakeimg.pl/60/')
+                    h3 Limited time offers
+                    p Similique sint consequatur id ipsum!
+                .feature
+                    img(src='http://fakeimg.pl/60/')
+                    h3 24/7 client support
+                    p Tenetur ullam iusto aliquam qui.
+            .items-area
                 .title
-                    h2 Testimonial
-                .details
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit rerum, facere sapiente quidem obcaecati impedit fugit quisquam odio nihil pariatur voluptas quo eaque id nobis rem, soluta consectetur numquam iusto. Molestias dignissimos explicabo quae. Laboriosam quod repudiandae iste unde optio. Rem ducimus, cupiditate aperiam possimus accusantium non eum provident exercitationem explicabo saepe impedit quo odit esse, libero excepturi beatae suscipit totam blanditiis expedita sequi iste assumenda optio fugiat! Aliquid qui vitae vel suscipit, accusantium quod doloremque, perspiciatis numquam necessitatibus consequuntur eveniet. Odio iste fugit delectus dignissimos. Recusandae hic eveniet atque, similique rerum dolorem. Aliquam placeat veniam sit distinctio commodi inventore consequuntur eum quos odio accusamus debitis repellendus corporis et, dolore consectetur, nemo alias ipsum porro numquam. Saepe, quod deleniti vitae reiciendis cupiditate quo exercitationem ex qui suscipit, ad corporis. Doloremque beatae qui commodi, aliquid vitae hic quaerat eum, amet veritatis iure facilis provident quisquam dicta aliquam. Quo commodi corporis incidunt nulla vero illum quos ipsam sed sit, ullam laboriosam doloribus, molestiae tempore dolore. Rerum voluptatem reiciendis nemo suscipit labore voluptates, necessitatibus voluptatibus saepe iure placeat modi facere vero veniam, magnam maiores dolor id beatae corrupti deserunt. Explicabo doloremque ab reprehenderit eos aliquid numquam beatae animi ea esse, fugit delectus reiciendis.
-                    h5 John Doe
-                    h6 CEO, ABC Software
-                    .members
-                        .member
-                            img(src='http://fakeimg.pl/76/')
-                        .member
-                            img(src='http://fakeimg.pl/76/')
-                        .member
-                            img(src='http://fakeimg.pl/76/')
-            .blog-area
+                    h2.current New Arrivals
+                    h2 Best Seller
+                    h2 Latest Products
+                .item-details
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Lorem, ipsum dolor.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Quidem, vitae quos.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Reiciendis, recusandae voluptatibus.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Unde, omnis cum.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Illum, minus totam!
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Nam, veniam eos!
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Voluptatibus, corrupti adipisci.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Ullam, dolores ab.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+            .ad-2-area
+                img.ad(src='http://fakeimg.pl/455x140/')
+                img.ad(src='http://fakeimg.pl/455x140/')
+            .best-sellers-area
                 .title
-                    h2
-                .details
-                    .blog-post
-                        .blog-img
-                            img(src='http://fakeimg.pl/220x120/')
-                        h3 Provident, debitis totam?
-                        .options
-                            span.author
-                            span.comments
-                            time
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illo odit obcaecati! Veniam adipisci quas exercitationem, ea illum temporibus nulla aspernatur optio repellendus at, placeat necessitatibus tempora delectus, deserunt soluta.
-                    .blog-post
-                        .blog-img
-                            img(src='http://fakeimg.pl/220x120/')
-                        h3 Lorem, ipsum dolor.
-                        .options
-                            span.author
-                            span.comments
-                            time
-                        p Porro cumque velit eligendi voluptatibus minus, voluptas quam rem, libero officiis quas officia quasi perferendis assumenda illo doloremque eius adipisci culpa vitae. Tempore consequuntur odit adipisci fugit a, possimus facilis.
-        .sponsors-area
-            img.sponsor(src='http://fakeimg.pl/165x65/')
-            img.sponsor(src='http://fakeimg.pl/165x65/')
-            img.sponsor(src='http://fakeimg.pl/165x65/')
-            img.sponsor(src='http://fakeimg.pl/165x65/')
-            img.sponsor(src='http://fakeimg.pl/165x65/')
-        .ad-3-area
-            img.ad(src='http://fakeimg.pl/300x163/')
-            img.ad(src='http://fakeimg.pl/300x163/')
-            img.ad(src='http://fakeimg.pl/300x163/')
-        footer
+                    h2 Best Sellers
+                    .pager
+                        a(href="") <
+                        a(href="") >
+                .item-details
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Lorem, ipsum dolor.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Lorem, ipsum dolor.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Lorem, ipsum dolor.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00
+                    .item
+                        img(src='http://fakeimg.pl/220x250/')
+                        h4 Lorem, ipsum dolor.
+                        .stars ☆☆☆☆☆
+                        h5.price 155.00                   
+            .test-blog-area
+                .test-area
+                    .title
+                        h2 Testimonial
+                    .details
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit rerum, facere sapiente quidem obcaecati impedit fugit quisquam odio nihil pariatur voluptas quo eaque id nobis rem, soluta consectetur numquam iusto. Molestias dignissimos explicabo quae. Laboriosam quod repudiandae iste unde optio. Rem ducimus, cupiditate aperiam possimus accusantium non eum provident exercitationem explicabo saepe impedit quo odit esse, libero excepturi beatae suscipit totam blanditiis expedita sequi iste assumenda optio fugiat! Aliquid qui vitae vel suscipit, accusantium quod doloremque, perspiciatis numquam necessitatibus consequuntur eveniet. Odio iste fugit delectus dignissimos.
+                        h5 John Doe
+                        h6 CEO, ABC Software
+                        .members
+                            .member
+                                img(src='http://fakeimg.pl/76/')
+                            .member
+                                img(src='http://fakeimg.pl/76/')
+                            .member
+                                img(src='http://fakeimg.pl/76/')
+                .blog-area
+                    .title
+                        h2 Lastest Blog
+                    .details
+                        .blog-post
+                            .blog-img
+                                img(src='http://fakeimg.pl/220x120/')
+                            h3 Provident, debitis totam?
+                            .options
+                                span.author John Williams
+                                span.comments 12 comments
+                                time 2017-02-25
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illo odit obcaecati! Veniam adipisci quas exercitationem, ea illum temporibus nulla aspernatur optio repellendus at, placeat necessitatibus tempora delectus, deserunt soluta.
+                            a(href="") Read More
+                        .blog-post
+                            .blog-img
+                                img(src='http://fakeimg.pl/220x120/')
+                            h3 Lorem, ipsum dolor.
+                            .options
+                                span.author John Williams
+                                span.comments 12 comments
+                                time 2017-02-25
+                            p Porro cumque velit eligendi voluptatibus minus, voluptas quam rem, libero officiis quas officia quasi perferendis assumenda illo doloremque eius adipisci culpa vitae. Tempore consequuntur odit adipisci fugit a, possimus facilis.
+                            a(href="") Read More
+            .sponsors-area
+                img.sponsor(src='http://fakeimg.pl/165x65/')
+                img.sponsor(src='http://fakeimg.pl/165x65/')
+                img.sponsor(src='http://fakeimg.pl/165x65/')
+                img.sponsor(src='http://fakeimg.pl/165x65/')
+                img.sponsor(src='http://fakeimg.pl/165x65/')
+            .ad-3-area
+                img.ad(src='http://fakeimg.pl/300x163/')
+                img.ad(src='http://fakeimg.pl/300x163/')
+                img.ad(src='http://fakeimg.pl/300x163/')
+            footer
 
