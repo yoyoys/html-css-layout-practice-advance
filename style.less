@@ -1,5 +1,6 @@
-// out: style.css,relativeUrls:true
+// out: style.css
 @import "./font-awesome/less/font-awesome";
+@fa-font-path:'font-awesome/fonts';
 @page-width:940px;
 @page-padding:25px;
 @bg-color-main:#fff;
@@ -109,10 +110,20 @@ a{
 }
 
 header{
-    position: relative;
+    z-index: 1;    
+    h1{
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: -1;
+    }
+
     &:after{
         .clearfix;
     }
+
+    position: relative;
     * {
         vertical-align: middle;
     }
@@ -141,12 +152,6 @@ header{
         }
     }
 
-    h1{
-        margin:auto;        
-        position: absolute;
-        width: 100%;
-        text-align: center;
-    }
     .search-panel{
         float:right;
         & * {
@@ -168,11 +173,14 @@ header{
         }
     }
 
+    
 }
 
 nav{
     ul{
         width: 100%;
+        border:@border-normal;
+        border-width: 4px 0;
         &:after{
             .clearfix;       
         }
@@ -182,11 +190,14 @@ nav{
         font-weight: 600;
         float: left;
         padding:20px;        
-        border:@border-normal;
-        border-width: 4px 0;
-        &.current{
+        a{color: black;}
+        &.current,&:hover{
+            position: relative;
+            margin:-4px 0;
+            padding:24px 20px;
             background-color: @highlight-color;
             border-color: @highlight-color;
+            a{color:white;}
         }
 
         &.right{
@@ -215,7 +226,7 @@ nav{
         width:212px;
         height:188px;
         
-        &:first-of-type{
+        &:nth-of-type(2){
             margin-bottom: 24px;
         }
     }
